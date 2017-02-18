@@ -53,3 +53,29 @@ class CondoSoldItem(Item):
 
     # framework = CondoFrameworkItem()    # 房子格局
     # position = CondoPosition()          # 位置信息
+
+
+# 小区信息
+class XiaoquItem(Item):
+    name = Field()
+    regionb = Field()
+    regions = Field()
+    style = Field()
+    year = Field()
+
+
+# 成交房屋信息
+class ChengjiaoItem(Item):
+    href = Field()
+    name = Field()
+    style = Field()
+    area = Field()
+    orientation = Field()
+    floor = Field()
+    year = Field()
+    sign_time = Field()
+    unit_price = Field()
+    total_price = Field()
+    fangchan_class = Field()
+    school = Field()
+    subway = Field()

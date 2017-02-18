@@ -5,6 +5,7 @@ from realestatemarket.items import CondoSoldItem
 import re
 
 
+# 抓取http://bj.lianjia.com/chengjiao/pg1~100的数据，数据较少
 class LianjiaChengjiaoSpider(scrapy.Spider):
 
     # scrapy唯一定位实例的属性，必须唯一
