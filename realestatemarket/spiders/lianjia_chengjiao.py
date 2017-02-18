@@ -21,7 +21,7 @@ class LianjiaChengjiaoSpider(scrapy.Spider):
 
         pages = []
 
-        for i in range(1,2):
+        for i in range(1,100):
             url = 'http://bj.lianjia.com/chengjiao/pg%s' % i
             page = scrapy.Request(url)
             pages.append(page)
