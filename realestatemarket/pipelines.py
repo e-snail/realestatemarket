@@ -52,3 +52,29 @@ class LianjiaSoldPipeline(object):
             db_object.rollback()
 
         return item
+
+
+class LianjiaChengjiaoPipeline(object):
+
+    def __init__(self):
+        return
+
+    # # pipeline默认调用
+    # @classmethod
+    # def process_item(cls, item, spider):
+    #     db_object = db_handle()
+    #     cursor = db_object.cursor()
+    #     sql = '''
+    #         insert into condo_sold(lj_id, square, expense, price, date, condo_framework, subdistrict_name)
+    #         values (%s, %s, %s, %s, %s, %s, %s)
+    #     '''
+    #
+    #     try:
+    #         cursor.execute(sql, ( item['lj_id'], item['square'], item['expense'], item['price'], item['date'], item['condo_framework'], item['subdistrict_name']))
+    #         db_object.commit()
+    #     except Exception as e:
+    #         print(e)
+    #         db_object.rollback()
+    #
+    #     return item
+

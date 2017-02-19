@@ -57,25 +57,29 @@ class CondoSoldItem(Item):
 
 # 小区信息
 class XiaoquItem(Item):
+    href = Field()
     name = Field()
-    regionb = Field()
-    regions = Field()
+    district = Field()
+    biz_circle = Field()
     style = Field()
-    year = Field()
+    build_year = Field()
 
 
 # 成交房屋信息
 class ChengjiaoItem(Item):
+    # 链接
     href = Field()
+    # 小区名
     name = Field()
-    style = Field()
+    # 户型
+    frame = Field()
+    # 面积
     area = Field()
-    orientation = Field()
-    floor = Field()
-    year = Field()
-    sign_time = Field()
+    # 成交日期
+    deal_date = Field()
+    # 单价
     unit_price = Field()
+    # 总价
     total_price = Field()
-    fangchan_class = Field()
-    school = Field()
-    subway = Field()
+    # 中介
+    agent = Field()

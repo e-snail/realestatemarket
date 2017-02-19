@@ -29,7 +29,7 @@ CREATE TABLE `lianjia_chengjiao`.`xiaoqu` (
 成交
 
 ```
-CREATE TABLE `database_test`.`chengjiao` (
+CREATE TABLE `lianjia_chengjiao`.`chengjiao` (
   `href` VARCHAR(200) NOT NULL,
   `name`  VARCHAR(45), 
   `style`  VARCHAR(45), 
