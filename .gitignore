@@ -91,7 +91,6 @@ ENV/
 .ropeproject
 .gitignore
 .idea/
-realestatemarket/
 scrapy.cfg
 
 .DS_Store
