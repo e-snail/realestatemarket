@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+realestatemarket/__pycache__/
 *.py[cod]
 *$py.class
 
@@ -94,3 +94,4 @@ ENV/
 scrapy.cfg
 
 .DS_Store
+

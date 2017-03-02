@@ -13,20 +13,22 @@ CREATE SCHEMA `lianjia_chengjiao`;
 
 2 创建数据表
 
-小区
+各区县所有小区
 
 ```
 CREATE TABLE `lianjia_chengjiao`.`xiaoqu` (
+  `href` VARCHAR(100) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
-  `regionb` VARCHAR(45) NULL,
-  `regions` VARCHAR(45) NULL,
+  `district` VARCHAR(45) NULL,
+  `biz_circle` VARCHAR(45) NULL,
   `style` VARCHAR(45) NULL,
-  `year` VARCHAR(45) NULL,
-  PRIMARY KEY (`name`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC));
+  `build_year` VARCHAR(45) NULL,
+  `average_price` VARCHAR(45) NULL,
+  PRIMARY KEY (`href`),
+  UNIQUE INDEX `href_UNIQUE` (`href` ASC)) DEFAULT CHARACTER SET = utf8; 
 ```
 
-成交
+每个小区的成交
 
 ```
 CREATE TABLE `lianjia_chengjiao`.`chengjiao` (
@@ -44,7 +46,7 @@ CREATE TABLE `lianjia_chengjiao`.`chengjiao` (
   `school` VARCHAR(45), 
   `subway` VARCHAR(45), 
   PRIMARY KEY (`href`),
-  UNIQUE INDEX `href_UNIQUE` (`href` ASC));
+  UNIQUE INDEX `href_UNIQUE` (`href` ASC)) DEFAULT CHARACTER SET = utf8;
 ```
 
 #### 抓取小区列表

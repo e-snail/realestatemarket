@@ -70,7 +70,8 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'realestatemarket.pipelines.LianjiaSoldPipeline': 300,
-   'realestatemarket.pipelines.LianjiaChengjiaoPipeline': 300
+   # 'realestatemarket.pipelines.LianjiaChengjiaoPipeline': 300,
+   'realestatemarket.pipelines.BJRegionXiaoquPipeline': 300
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

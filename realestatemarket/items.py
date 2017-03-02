@@ -63,6 +63,7 @@ class XiaoquItem(Item):
     biz_circle = Field()
     style = Field()
     build_year = Field()
+    average_price = Field()
 
 
 # 成交房屋信息

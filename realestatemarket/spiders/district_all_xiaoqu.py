@@ -24,7 +24,7 @@ class BJXiaoquSpiderPipeline(scrapy.Spider):
     def start_requests(self):
 
         pages = []
-        counts = [1]
+        counts = [1, 2]
 
         region = u"朝阳"
 
@@ -40,7 +40,7 @@ class BJXiaoquSpiderPipeline(scrapy.Spider):
         # response  <200 http://bj.lianjia.com/xiaoqu/rs朝阳/>  请求返回成功
         # response.body 返回的网页内容
 
-        items = []
+        # items = []
 
         # plain_text = unicode(response)  # ,errors='ignore')
         soup = BeautifulSoup(response.body, "lxml")
@@ -62,6 +62,11 @@ class BJXiaoquSpiderPipeline(scrapy.Spider):
             xiaoqu_item['style'] = contents[2].strip()
             xiaoqu_item['build_year'] = re.findall('[\d]{4}', contents[3].strip())[0]
 
-            items.append(xiaoqu_item)
+            average_price = xq.find('div', {'class': 'xiaoquListItemRight'}).find('div', {'class': 'totalPrice'}).span.text
+            xiaoqu_item['average_price'] = average_price
 
-        return items
+            yield xiaoqu_item
+            # items.append(xiaoqu_item)
+
+        # return items
+
